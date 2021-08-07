@@ -1,0 +1,155 @@
+
+/* total style */
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0;}
+
+@font-face {
+    font-family: 'HikouRegular';
+    src: url('./FONT/Hikou\ Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'HikouCorroded';
+    src: url('./FONT/Hikou\ Corroded.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'HikouOutline';
+    src: url('./FONT/Hikou\ Outline.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Elephant';
+    src: url('./FONT/Elephant-PersonalUse.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Elephant';
+    font-size:15px;
+    color: white;
+
+
+}
+.milad {
+    height:100vh;
+    background:url(./milad.jpg) ;
+    background-size:cover ;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+.eiffel{
+    height:100vh;
+    background:url(./eiffel.jpg) ;
+    background-size:cover ;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+.khalifa{
+    height:100vh;
+    background:url(./khalifa.jpg) ;
+    background-size:cover ;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+.shanghai{
+    height:100vh;
+    background:url(./shanghai.jpg) ;
+    background-size:cover ;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);}
+h1{
+    font-weight:unset;
+}
+a{
+    font-size:2em;
+    font-family:'HikouOutline';
+    text-decoration: unset;
+    color:white;
+}
+
+
+
+/* navbar style */
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 30px;
+}
+.navbar-logo{
+    width:50px;
+    height:auto;
+}
+/*sider style*/
+.sider_item{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0 20px;
+}
+.sider_item-btn{
+    width:50px;
+    height: 50px;
+    border-radius:50%;
+    background-color:transparent;
+    font-size:1.5em;
+    color:white;
+    cursor:pointer;
+}
+
+/*footer*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding:40px;
+}
+.footer--link{
+    display: flex;
+    align-items:flex-end;
+    cursor:pointer;
+    cursor:pointer;
+}
+.footer--link-line{
+    width:100px;
+    height:2px;
+    border:1px solid white;
+    margin-bottom:5px;
+}
+.footer--link:hover {
+    font-family: 'HikouRegular';
+}
+.footer--link:hover .footer--link-line{
+    background: rgb(255, 255, 255);
+}
+
+
+/*responsive*/
+
+@media only screen and (max-width : 800px) {
+    body{
+        font-size:13px;
+    }
+    .milad-mobile {
+        background-image:url(./milad-mobile.jpg);
+    }
+    .navbar-logo{
+        width:40px;
+    }
+    .footer{
+        justify-content: center;
+        align-items: center;
+    }
+}
