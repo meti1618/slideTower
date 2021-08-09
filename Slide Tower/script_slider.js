@@ -22,55 +22,53 @@ document.body.classList.add(bgNeme[index])
 document.body.classList.add('milad-mobile')
 
 
-window.setInterval(slideshow,10000)
+window.setInterval(function (){
+    if (index > bgNeme.length-2) {
+        index = 0 ;
+        return  funcChanger(index) ,index
 
-function slideshow() {
-    if (index < bgNeme.length-1) {
-        index++ ;
-        funcChanger()
-        return index ;
     }else{
-        return index = -1 ;
+        index++
+        return  funcChanger(index) ,index
+
     }
-}
+},5000)
+
 
 function next(){
-    if (index < bgNeme.length-1) {
-        index++ ;
-        funcChanger()
-        if (index === 0) {
-            document.body.classList.add('milad-mobile')
-        }
-        return index ;
-    }else{
-        return index = -1 ;
-    }
+    if (index > bgNeme.length-2) {
+        index = 0 ;
+        return  funcChanger(index) ,index
 
+    }else{
+        index++
+        return  funcChanger(index) ,index
+
+    }
 }
+
+
 function back (){
-    if (index > 0 ) {
-        index-- ;
-        funcChanger()
-        console.log(index)
-        if (index === 0) {
-            document.body.classList.add('milad-mobile')
-        }
-        return index ;
+    if (index <= 0) {
+        index = bgNeme.length-1
+        return  funcChanger(index) ,index
     }else{
-        return index = 4 ;
+        index--
+        return  funcChanger(index) ,index
     }
-
-
 }
 
 
 
-function funcChanger(){
+function funcChanger(i){
 
     document.body.removeAttribute("class");
-    document.body.classList.add(bgNeme[index]);
-    link.setAttribute('href',`https://en.m.wikipedia.org/wiki/${bgNeme[index]}_Tower`)
-    title.innerText = titles[index];
+    document.body.classList.add(bgNeme[i]);
+    link.setAttribute('href',`https://en.m.wikipedia.org/wiki/${bgNeme[i]}_Tower`)
+    title.innerText = titles[i];
+    if (index === 0){
+        document.body.classList.add('milad-mobile')
+    }
 
 }
 
