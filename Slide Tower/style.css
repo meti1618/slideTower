@@ -39,8 +39,7 @@ body{
     font-family: 'Elephant';
     font-size:15px;
     color: white;
-
-
+    transition: background 0.5s linear;
 }
 .milad {
     height:100vh;
